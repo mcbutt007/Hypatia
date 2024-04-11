@@ -61,7 +61,7 @@
     <string name="detections_found">Trovate delle corrispondenze! :(</string>
     <string name="confirm_lookup_title">Conferma la ricerca</string>
     <string name="confirm_lookup_summary">Sei sicuro di voler cercare il seguente hash su VirusTotal.com tramite il tuo browser?</string>
-    <string name="confirm_delete_title">Conferma l'eliminazione</string>
+    <string name="confirm_delete_title">Conferma l\'eliminazione</string>
     <string name="confirm_delete_summary">Sei sicuro di voler eliminare il seguente file?</string>
     <string name="delete_failed">Eliminazione fallita!</string>
     <string name="ignored">Ignorato!</string>
@@ -71,7 +71,7 @@
     <string name="lblSelfTest">Scrivi file per test autodiagnostico</string>
     <string name="lblExtendedDatabaseToggle">Database esteso</string>
     <string name="confirm_extended_title">Abilitare il database esteso?</string>
-    <string name="confirm_extended_summary">[SPERIMENTALE]Questa opzione abiliterà la rilevazione di altre 40 milioni di firme circa.\nCiò richiede uno scaricamento di 125 MB di dati, rallenterà l'avvio dell'applicazione di più di due minuti, aumenterà il consumo di RAM e il tasso di falsi positivi.\nQuesto database si aggiorna ogni tre mesi.</string>
+    <string name="confirm_extended_summary">[SPERIMENTALE]Questa opzione abiliterà la rilevazione di altre 40 milioni di firme circa.\nCiò richiede uno scaricamento di 125 MB di dati, rallenterà l\'avvio dell\'applicazione di più di due minuti, aumenterà il consumo di RAM e il tasso di falsi positivi.\nQuesto database si aggiorna ogni tre mesi.</string>
     <string name="confirm_update_title">Conferma scaricamento</string>
     <string name="confirm_update_summary">Sembra che tu sia connesso a una rete a consumo. Sei sicuro di voler aggiornare i database?\nCiò potrebbe causare lo scaricamento di %s megabyte di dati.</string>
     <string name="lblUpdateRunning">Operazione non eseguita poiché un aggiornamento è in corso!</string>

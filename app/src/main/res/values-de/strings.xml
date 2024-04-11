@@ -18,7 +18,7 @@
     <string name="lblNotificationMalwareDetectionTitle">Schadsoftware-Erkennung</string>
     <string name="lblNotificationMalwareDetectionDescription">Dient zur direkten Warnung bei erkannter Schadsoftware</string>
     <string name="lblNotificationRealtimeTitle">Echtzeit-Scanner</string>
-    <string name="lblNotificationRealtimeDescription">Dient zur Aufzählung bereits dursuchter Dateien und der Aufrechthaltung des aktiven Scan's im Hintergrund</string>
+    <string name="lblNotificationRealtimeDescription">Dient zur Aufzählung bereits dursuchter Dateien und der Aufrechthaltung des aktiven Scan\'s im Hintergrund</string>
     <string name="lblNotificationRealtimeText">Bekannte Schadsoftware wird in Echtzeit erkannt</string>
     <string name="lblNotificationRealtimeStopped">Hypatia: Echtzeit-Scanner wurde gestoppt</string>
     <string name="lblNotificationRealtimeDetection">Schadsoftware gefunden:</string>
