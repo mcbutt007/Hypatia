@@ -11,3 +11,8 @@ cat extended.html >> production/index.html
 mv raw/hypatia-*-bloom.bin production/
 
 sed -s 'N;/md5: 0, sha1: 0, sha256: 0/!P;D' -i production/index.html
+
+
+sed -r '/Skipping/{/virustotal/!s~[^ -~]{64}+~<a href="https://www.virustotal.com/gui/file/&" target="_blank" rel="nofollow noopener noreferrer">&</a>~}' -i production/index.html
+sed -r '/Skipping/{/virustotal/!s~[^ -~]{40}+~<a href="https://www.virustotal.com/gui/file/&" target="_blank" rel="nofollow noopener noreferrer">&</a>~}' -i production/index.html
+sed -r '/Skipping/{/virustotal/!s~[^ -~]{32}+~<a href="https://www.virustotal.com/gui/file/&" target="_blank" rel="nofollow noopener noreferrer">&</a>~}' -i production/index.html

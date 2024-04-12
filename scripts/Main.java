@@ -32,6 +32,8 @@ import java.util.stream.Stream;
 import java.util.zip.GZIPInputStream;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+//import org.sqlite.*;
+//import java.sql.*;
 
 public class Main {
 
@@ -57,6 +59,7 @@ public class Main {
     private static ArrayList<String> arrExclusions = new ArrayList<String>();
 
     public static void main(String[] args) {
+        //isFileInNsrl("B61905308B336AD268A782790B661616");
         signaturesMD5 = BloomFilter.create(Funnels.stringFunnel(Charsets.US_ASCII), 6000000, 0.00001); //6m
         signaturesSHA1 = BloomFilter.create(Funnels.stringFunnel(Charsets.US_ASCII), 50000, 0.00001); //50k
         signaturesSHA256 = BloomFilter.create(Funnels.stringFunnel(Charsets.US_ASCII), 2000000, 0.00001); //2m
@@ -178,6 +181,9 @@ public class Main {
                     System.out.println("\t\tSkipping excluded hash: " + potentialHash);
                     return;
                 }
+		//if(isFileInNsrl(potentialHash)) {
+                //    return;
+                //}
                 if (potentialHash.length() == 32) {
                     if (signaturesMD5.put(potentialHash)) {
                         amtSignaturesAddedMD5++;
@@ -206,4 +212,51 @@ public class Main {
             }
         }
     }
+
+    //CREATE INDEX hashIndexMD5 ON FILE (md5); CREATE INDEX hashIndexSHA1 ON FILE (sha1); CREATE INDEX hashIndexSHA256 ON FILE (sha256);
+    //CREATE INDEX hashIndex ON FILE (md5,sha1,sha256);
+    /*private static String url = "jdbc:sqlite:RDS_2024.03.1_android_minimal.db";
+    private static Connection connection = null;
+    private static Statement statement = null;
+    private static boolean isFileInNsrl(String hash) {
+        String hashType = null;
+        switch(hash.length()) {
+            case 32:
+                hashType = "md5";
+                break;
+            case 40:
+                hashType ="sha1";
+                break;
+            case 64:
+                hashType ="sha256";
+                break;
+            default:
+                return false;
+        }
+        String sql = "select package_id,md5,sha1,sha256 from FILE where " + hashType + " = '" + hash.toUpperCase() + "';";
+        try {
+            if(connection == null || statement == null) {
+                SQLiteConfig config = new SQLiteConfig();
+                config.setReadOnly(true);
+                config.setSharedCache(true);
+                connection = DriverManager.getConnection(url, config.toProperties());
+                statement = connection.createStatement();
+            }
+            ResultSet rs = statement.executeQuery(sql);
+            if(rs.next()) {
+                System.out.println("\t\tSkipping excluded NSRL hash: "+ rs.getString("md5").toLowerCase());
+                System.out.println("\t\tSkipping excluded NSRL hash: " + rs.getString("sha1").toLowerCase());
+                System.out.println("\t\tSkipping excluded NSRL hash: " + rs.getString("sha256").toLowerCase());
+                ResultSet rsPkg = statement.executeQuery("select name from PKG where package_id = '" + rs.getString("package_id") + "';");
+                if (rsPkg.next()) {
+                    System.out.println("\t\t\tFrom: " + rsPkg.getString("name"));
+                }
+                return true;
+            }
+            return false;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }*/
 }
