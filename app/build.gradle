@@ -1,10 +1,10 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 33
+    compileSdkVersion 34
     defaultConfig {
         applicationId "us.spotco.malwarescanner"
-        minSdkVersion 16
+        minSdkVersion 28
         targetSdkVersion 32
         versionCode 309
         versionName "3.09"
@@ -13,7 +13,6 @@ android {
     buildTypes {
         debug {
             applicationIdSuffix ".debug"
-            minifyEnabled true
             zipAlignEnabled true
         }
         release {
@@ -27,16 +26,26 @@ android {
         abortOnError false
     }
     packagingOptions {
+        pickFirst 'META-INF/versions/9/OSGI-INF/MANIFEST.MF'
         exclude 'org/bouncycastle/pqc/crypto/picnic/lowmcL1.bin.properties'
         exclude 'org/bouncycastle/pqc/crypto/picnic/lowmcL3.bin.properties'
         exclude 'org/bouncycastle/pqc/crypto/picnic/lowmcL5.bin.properties'
         exclude 'org/bouncycastle/x509/CertPathReviewerMessages.properties'
         exclude 'org/bouncycastle/x509/CertPathReviewerMessages_de.properties'
     }
+    namespace 'us.spotco.malwarescanner'
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
 }
 
 dependencies {
-    implementation 'commons-io:commons-io:2.5'
-    implementation 'org.bouncycastle:bcpg-jdk15to18:1.77'
+    implementation 'commons-io:commons-io:2.13.0'
+    implementation 'org.bouncycastle:bcpg-jdk18on:1.78.1'
     implementation 'com.google.guava:guava:33.0.0-jre'
+    implementation ('org.hyperledger.fabric:fabric-gateway:1.5.1') {
+        exclude group : 'com.google.api.grpc', module : 'proto-google-common-protos'
+    }
+    implementation 'io.grpc:grpc-okhttp:1.63.0'
 }
