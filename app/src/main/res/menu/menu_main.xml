@@ -51,6 +51,9 @@
         android:id="@+id/mnuSelfTestReal"
         android:title="@string/lblSelfTest" />
     <item
+        android:id="@+id/mnuUseIPFS"
+        android:title="@string/lblUseIPFS" />
+    <item
         android:id="@+id/mnuUseBlockchain"
         android:title="@string/lblUseBlockchain" />
     <item

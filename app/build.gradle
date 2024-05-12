@@ -47,5 +47,6 @@ dependencies {
     implementation ('org.hyperledger.fabric:fabric-gateway:1.5.1') {
         exclude group : 'com.google.api.grpc', module : 'proto-google-common-protos'
     }
+    implementation 'com.github.ipfs:java-ipfs-api:v1.4.4'
     implementation 'io.grpc:grpc-okhttp:1.63.0'
 }
