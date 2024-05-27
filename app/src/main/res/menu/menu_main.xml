@@ -8,6 +8,11 @@
         android:icon="@android:drawable/ic_media_play"
         android:showAsAction="always" />
     <item
+        android:id="@+id/mnuUseIPFS"
+        android:title="@string/lblUseIPFS"
+        android:checkable="true"
+        />
+    <item
         android:id="@+id/toggleOnionRouting"
         android:title="@string/lblOnionRoutingToggle"
         android:checkable="true" />
@@ -50,9 +55,6 @@
     <item
         android:id="@+id/mnuSelfTestReal"
         android:title="@string/lblSelfTest" />
-    <item
-        android:id="@+id/mnuUseIPFS"
-        android:title="@string/lblUseIPFS" />
     <item
         android:id="@+id/mnuUseBlockchain"
         android:title="@string/lblUseBlockchain" />
