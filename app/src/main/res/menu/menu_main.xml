@@ -17,6 +17,9 @@
         android:title="@string/lblOnionRoutingToggle"
         android:checkable="true" />
     <item
+        android:id="@+id/mnuUseBlockchain"
+        android:title="@string/lblUseBlockchain" />
+    <item
         android:id="@+id/mnuUpdateDatabase"
         android:title="@string/lblUpdateDatabase" />
     <item
@@ -55,9 +58,6 @@
     <item
         android:id="@+id/mnuSelfTestReal"
         android:title="@string/lblSelfTest" />
-    <item
-        android:id="@+id/mnuUseBlockchain"
-        android:title="@string/lblUseBlockchain" />
     <item
         android:id="@+id/mnuFullCredits"
         android:title="@string/lblFullCredits" />

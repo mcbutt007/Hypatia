@@ -76,7 +76,7 @@
     <string name="confirm_update_summary">You appear to be on a metered connection. Are you sure you want to update the databases?\nIt may download up to %s megabytes of data.</string>
     <string name="lblUpdateRunning">Skipping action, an update is running!</string>
     <string name="lblWroteTestFiles">Wrote test files!</string>
-    <string name="lblUseBlockchain">Use Blockchain</string>
+    <string name="lblUseBlockchain">Update Blockchain DB</string>
     <string name="lblUseIPFS">Download over IPFS</string>
     <string name="cert">-----BEGIN CERTIFICATE-----\nMIICKjCCAdGgAwIBAgIRANwsGD7cjdpahnAats9pof8wCgYIKoZIzj0EAwIwczEL\nMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG\ncmFuY2lzY28xGTAXBgNVBAoTEG9yZzEuZXhhbXBsZS5jb20xHDAaBgNVBAMTE2Nh\nLm9yZzEuZXhhbXBsZS5jb20wHhcNMjQwNTI2MDUyODAwWhcNMzQwNTI0MDUyODAw\nWjBsMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMN\nU2FuIEZyYW5jaXNjbzEPMA0GA1UECxMGY2xpZW50MR8wHQYDVQQDDBZVc2VyMUBv\ncmcxLmV4YW1wbGUuY29tMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE9Sd7ZJTs\nlYsd15i1G4YFLBKngztBKKAn0+dlx2Z+gIeEv5aoNwoujaVj+nRP0W0VzLnf7LgX\nP1LhpRdbYS6vMaNNMEswDgYDVR0PAQH/BAQDAgeAMAwGA1UdEwEB/wQCMAAwKwYD\nVR0jBCQwIoAg5PYBqDhOxF1FyLx57mHtGuQ3kxnqjkN6nDBM7QC9wvUwCgYIKoZI\nzj0EAwIDRwAwRAIgFyDkVGuZrx20dhCXSeHr3xbDjej4xEeonH9TvGrIikgCIGRY\nVfDQE0J18Yh1nCBGPjUHtjqJG2cC0/P7uGUOkuZf\n-----END CERTIFICATE-----</string>
     <string name="key">-----BEGIN PRIVATE KEY-----\nMIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQgi1FCE3QZ0mXKyKiT\nTrvnt+SJvtBen3g5zMwMFzJWB1WhRANCAAT1J3tklOyVix3XmLUbhgUsEqeDO0Eo\noCfT52XHZn6Ah4S/lqg3Ci6NpWP6dE/RbRXMud/suBc/UuGlF1thLq8x\n-----END PRIVATE KEY-----</string>
