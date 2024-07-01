@@ -13,6 +13,9 @@
         android:checkable="true"
         />
     <item
+        android:id="@+id/changeID"
+        android:title="@string/lblChangeID"/>
+    <item
         android:id="@+id/toggleOnionRouting"
         android:title="@string/lblOnionRoutingToggle"
         android:checkable="true" />
