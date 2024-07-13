@@ -10,7 +10,10 @@
     <item
         android:id="@+id/mnuUseIPFS"
         android:title="@string/lblUseIPFS"
-        />
+        android:checkable="true"/>
+    <item
+        android:id="@+id/mnuDownloadIPFS"
+        android:title="@string/lblDownloadIPFS"/>
     <item
         android:id="@+id/changeID"
         android:title="@string/lblChangeID"/>
